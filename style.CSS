@@ -16,6 +16,7 @@ body {
 .container {
     display: flex;
     min-height: 100vh;
+    flex-wrap: wrap;
 }
 
 /* 左侧侧边栏 */
@@ -190,3 +191,85 @@ body {
     justify-content: center;
 }
 
+/* 响应式设计 */
+
+@media screen and (max-width: 1200px) {
+    /* 在较大设备上侧边栏可以保持 */
+    .sidebar {
+        width: 250px;
+    }
+
+    /* 内容区域 */
+    .main-content {
+        padding: 30px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    /* 在小屏幕上，侧边栏转为顶部导航或折叠 */
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        border-right: none;
+    }
+
+    /* 内容区域自适应屏幕 */
+    .main-content {
+        margin: 10px 0;
+        padding: 20px;
+    }
+
+    /* 项目区设置为单列布局 */
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cat {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    /* 超小屏幕设备（如手机） */
+    body {
+        font-size: 14px;  /* 调整文字大小 */
+    }
+
+    .profile .pic {
+        width: 100px;  /* 头像尺寸调整 */
+        height: 100px;
+    }
+
+    .sidebar h2 {
+        font-size: 20px;
+    }
+
+    .sidebar p {
+        font-size: 12px;
+    }
+
+    .section h3 {
+        font-size: 14px;
+    }
+
+    .section ul li {
+        font-size: 12px;
+    }
+
+    .card .image {
+        height: 150px;  /* 调整卡片图片大小 */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .cat {
+        width: 200px;  
+        height: 200px;
+    }
+}
