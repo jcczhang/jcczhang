@@ -190,6 +190,24 @@ body {
     color: #ddd;
     margin: 0;
 }
+.tags {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tag {
+    background: rgba(118, 199, 255, 0.2); /* 淡蓝色背景 */
+    color: #76c7ff; /* 文字颜色 */
+    font-size: 12px;
+    padding: 4px 10px;
+    border-radius: 15px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
 
 
 /* cat */
@@ -208,6 +226,11 @@ body {
     width: 50%;
     height: 300%;
 }
+
+.cat model-viewer::part(default-progress-bar) {
+    display: none;
+}
+
 
 
 
