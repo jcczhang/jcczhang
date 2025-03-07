@@ -12,7 +12,7 @@
 
 <div class="container">
 
-    <!-- 左侧栏 -->
+    <!-- left -->
     <aside class="sidebar">
         <div class="profile">
             <img src="image/photo.png" class="pic">
@@ -34,7 +34,7 @@
         </div>
     </aside>
 
-    <!-- 右侧主内容区 -->
+    <!-- right -->
     <main class="main-content">
         <header class="intro">
             <h1>Hey, I'm Jaycee!</h1>
@@ -44,18 +44,7 @@
         <section class="projects">
             <h2>Projects</h2>
             <div class="grid">
-                <!-- Project 1 -->
-                <div class="card">
-                    <img src="image/pw.png" class="image">
-                    <div class="info">
-                        <a href="#">
-                        <h3>Personal Website</h3>
-                        </a>
-                        <p class="date">2025-03-06</p>
-                        <p class="description">
-                            Built a responsive personal website with 3D interactive cat and modern design.</p>
-                    </div>
-                </div>
+
 
                 <!-- Project 2 -->
                 <div class="card">
@@ -84,7 +73,49 @@
                             Built a responsive personal website with 3D interactive cat and modern design.
                         </a>
                     </div>
-                </div>               
+                </div> 
+                <!-- Project 4 -->
+                <div class="card">
+                    <img src="image/61b.png" class="image">
+                    <div class="info">
+                        <a href="#">
+                        <h3>Build Your Own World(BYOW)</h3>
+                        <p class="date">2023/4</p>
+                        <p class="description">
+                            Developed a 2D game using Java and the CS 61B library. 
+                            Implemented various game mechanics and features, including 
+                            player movement, collision detection, and scoring.
+                        </a>
+                    </div>
+                </div> 
+
+                <!-- Project 5 -->
+                <div class="card">
+                    <img src="image/cs161.png" class="image">
+                    <div class="info">
+                        <a href="#">
+                        <h3>A Secure File Sharing System</h3>
+                        <p class="date">2025/3</p>
+                        <p class="description">
+                            CS161 Project2 : Using Golang to build a secure file 
+                            sharing system that allows users to upload, download, 
+                            and share files with others.
+                        </a>
+                    </div>
+                </div> 
+
+                <!-- Project 1
+                <div class="card">
+                    <img src="image/pw.png" class="image">
+                    <div class="info">
+                        <a href="#">
+                        <h3>Personal Website</h3>
+                        </a>
+                        <p class="date">2025-03-06</p>
+                        <p class="description">
+                            Built a responsive personal website with 3D interactive cat and modern design.</p>
+                    </div> -->
+                </div>
             </div>
         </section>
 
@@ -92,12 +123,13 @@
 
     </main>
 
-    <!-- 3D 小猫 -->
+    <!-- 3D cat -->
     <div class="cat">
         <model-viewer  
-            src="3d.glb"   
+            src="cat.glb"   
             id="cat"
             camera-orbit="90deg 90deg 1.5m"
+            model-scale="0.5 0.5 0.5"
             ar>
         </model-viewer>
     </div>

@@ -1,4 +1,4 @@
-/* 基础全局 */
+/* teneral */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -7,19 +7,18 @@
 
 body {
     font-family: 'Inter', sans-serif;
-    background: linear-gradient(to bottom right, #0d1b2a, #1b263b, #415a77);
+    background: linear-gradient(to bottom right, #0d1b2a, #2c384e, #7f9cbc);
     color: #eee;
     line-height: 1.6;
 }
 
-/* 页面布局 */
 .container {
     display: flex;
     min-height: 100vh;
     flex-wrap: wrap;
 }
 
-/* 左侧侧边栏 */
+/* Left */
 .sidebar {
     width: 280px;
     background: rgba(255, 255, 255, 0.1);
@@ -32,7 +31,7 @@ body {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
 
-/* 头像和名字 */
+/* name, profile */
 .profile {
     text-align: center;
     margin-bottom: 30px;
@@ -48,13 +47,13 @@ body {
 }
 
 .sidebar h2 {
-    font-size: 22px;
+    font-size: 25px;
     color: #fff;
     margin-bottom: 5px;
 }
 
 .sidebar p {
-    font-size: 14px;
+    font-size: 16px;
     color: #ccc;
 }
 
@@ -64,22 +63,17 @@ body {
 }
 
 .section h3 {
-    font-size: 16px;
+    font-size: 20px;
     margin-bottom: 10px;
     color: #fff;
 }
 
-.section ul {
-    list-style: none;
-}
-
-.section ul li {
+.contact ul li {
     margin: 5px 0;
 }
 
 .section a {
     color: #76c7ff;
-    text-decoration: none;
     transition: color 0.3s;
 }
 
@@ -87,7 +81,7 @@ body {
     color: #fff;
 }
 
-/* 右侧内容区域 */
+/* right */
 .main-content {
     flex: 1;
     padding: 50px;
@@ -98,17 +92,37 @@ body {
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
 
-/* 介绍部分 */
+/* intro */
 .intro h1 {
     font-size: 36px;
     color: #fff;
+    font-family: 'Courier New', Courier, monospace;
     margin-bottom: 10px;
 }
 
 .intro p {
-    font-size: 16px;
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
     color: #ddd;
 }
+
+/* Define the typing effect */
+@keyframes typing {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+.intro h1 {
+    display: inline-block; 
+    overflow: hidden; 
+    white-space: nowrap; 
+    animation: typing 3s steps(30) 1s forwards; 
+}
+
 
 /* 项目区 */
 .projects {
@@ -155,7 +169,7 @@ body {
 }
 
 .info a:hover {
-    color: #76c7ff; /* 悬停时变科技蓝 */
+    color: #76c7ff; /* hover light blue */
 }
 
 .info h3 {
@@ -178,35 +192,27 @@ body {
 }
 
 
-/* 小猫 */
+/* cat */
 .cat {
     position: fixed;
     bottom: 20px;
     right: 20px;
     width: 200px;
-    height: 200px;
-    overflow: hidden;
+    height: 200px; 
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-/* 响应式设计 */
-
-@media screen and (max-width: 1200px) {
-    /* 在较大设备上侧边栏可以保持 */
-    .sidebar {
-        width: 250px;
-    }
-
-    /* 内容区域 */
-    .main-content {
-        padding: 30px;
-    }
+.cat model-viewer {
+    width: 50%;
+    height: 300%;
 }
 
+
+
+/* screen small */
 @media screen and (max-width: 768px) {
-    /* 在小屏幕上，侧边栏转为顶部导航或折叠 */
     .container {
         flex-direction: column;
     }
@@ -231,19 +237,19 @@ body {
 
     .cat {
         width: 150px;
-        height: 150px;
+        height: 200px;
     }
 }
 
 @media screen and (max-width: 480px) {
     /* 超小屏幕设备（如手机） */
     body {
-        font-size: 14px;  /* 调整文字大小 */
+        font-size: 16px;  /* 调整文字大小 */
     }
 
     .profile .pic {
-        width: 100px;  /* 头像尺寸调整 */
-        height: 100px;
+        width: 80px;  /* 头像尺寸调整 */
+        height: 80px;
     }
 
     .sidebar h2 {
@@ -265,11 +271,11 @@ body {
     .card .image {
         height: 150px;  /* 调整卡片图片大小 */
     }
-}
-
-@media screen and (max-width: 768px) {
-    .cat {
-        width: 200px;  
-        height: 200px;
+    .contact ul {
+        flex-direction: row;  /* 小屏横着排列 */
+        justify-content: center;
+        gap: 15px;
+        color: white;
     }
 }
+
