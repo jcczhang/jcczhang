@@ -35,38 +35,25 @@ body {
 .profile {
     text-align: center;
     margin-bottom: 30px;
-    align-items: center; 
-    justify-content: center;
+
 }
 
 .pic {
     width: 100%;
     height: auto;
     display: flex;
-    object-fit: cover;
     margin-bottom: 10px;
-    border: 2px solid rgba(255, 255, 255, 0.5);
-    align-items: center; /* 水平居中 */
+    align-items: center; 
     justify-content: center;
 }
 
-.sidebar h2 {
-    font-size: 25px;
-    color: #fff;
-    margin-bottom: 5px;
+
+/* section */
+.about {
+    margin-bottom: 25px; /* about 和contact */
 }
 
-.sidebar p {
-    font-size: 16px;
-    color: #ccc;
-}
-
-/* 侧边栏模块 */
-.section {
-    margin-bottom: 25px;
-}
-
-.section h3 {
+.about h3 {
     font-size: 20px;
     margin-bottom: 10px;
     color: #fff;
@@ -74,14 +61,16 @@ body {
 
 .contact ul li {
     margin: 5px 0;
+    display: flex;
+    list-style: none;
 }
 
-.section a {
+.contact a {
     color: #76c7ff;
     transition: color 0.3s;
 }
 
-.section a:hover {
+.contact a:hover {
     color: #fff;
 }
 
@@ -110,7 +99,7 @@ body {
     color: #ddd;
 }
 
-/* Define the typing effect */
+/* anime */
 @keyframes typing {
     0% {
         width: 0;
@@ -120,7 +109,7 @@ body {
     }
 }
 
-.intro h1 {
+.intro h1 { /* Hey Im Jaycee*/
     display: inline-block; 
     overflow: hidden; 
     white-space: nowrap; 
@@ -128,7 +117,7 @@ body {
 }
 
 
-/* 项目区 */
+/* Project */
 .projects {
     margin-top: 30px;
 }
@@ -139,8 +128,9 @@ body {
     gap: 20px;
 }
 
-/* 单个卡片 */
+/* card class */
 .card {
+    margin-top: 20px;
     backdrop-filter: blur(15px);
     border-radius: 12px;
     overflow: hidden;
@@ -176,7 +166,7 @@ body {
     color: #76c7ff; /* hover light blue */
 }
 
-.info h3 {
+.info h3 { /*title*/
     margin: 0;
     font-size: 18px;
     line-height: 1.4;
@@ -202,8 +192,8 @@ body {
 }
 
 .tag {
-    background: rgba(118, 199, 255, 0.2); /* 淡蓝色背景 */
-    color: #76c7ff; /* 文字颜色 */
+    background: rgba(118, 199, 255, 0.2); /* light blue background */
+    color: #76c7ff; /* font color ligther than background */
     font-size: 12px;
     padding: 4px 10px;
     border-radius: 15px;
@@ -211,8 +201,6 @@ body {
     letter-spacing: 0.5px;
     text-transform: uppercase;
 }
-
-
 
 /* cat */
 .cat {
@@ -235,9 +223,6 @@ body {
     display: none;
 }
 
-
-
-
 /* screen small */
 @media screen and (max-width: 768px) {
     .container {
@@ -251,13 +236,11 @@ body {
         border-right: none;
     }
 
-    /* 内容区域自适应屏幕 */
     .main-content {
         margin: 10px 0;
         padding: 20px;
     }
 
-    /* 项目区设置为单列布局 */
     .grid {
         grid-template-columns: 1fr;
     }
@@ -265,6 +248,13 @@ body {
     .cat {
         width: 150px;
         height: 200px;
+    }
+
+    .contact ul {
+        flex-direction: row; 
+        flex-wrap: wrap; 
+        justify-content: center; 
+        gap: 15px; 
     }
 }
 
@@ -300,10 +290,9 @@ body {
         height: 150px;  
     }
     .contact ul {
-        flex-direction: row;  
+        flex-direction: row; 
         justify-content: center;
         gap: 15px;
-        color: white;
     }
 }
 
