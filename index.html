@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,183 +9,225 @@
     <script type="module" src="https://unpkg.com/@google/model-viewer@v3.3.0/dist/model-viewer.min.js"></script>
 
 </head>
+
 <body>
 
-<div class="container">
+    <div class="container">
 
-    <!-- left -->
-    <aside class="sidebar">
-        <div class="profile">
-            <img src="image/photo.png" class="pic">
-            <h2>Jaycee</h2>
-            <p>Software Development Engineer</p>
-        </div>    
-        <div class="about">
-            <h3>About</h3>
-            <p>Hi, I'm Jaycee. A senior undergrad student at UC Berkeley 
-                major in Computer Science.
-                Welcome to my creative space where design meets code!</p>
-        </div>
-        <div class="contact">
-            <h3>Contact</h3>
-            <ul>
-                <li><a href="https://github.com/jcczhang">GitHub</a></li>
-                <li><a href="http://linkedin.com/in/jingxi-zhang-706b23228">LinkedIn</a></li>
-                <li><a href="mailto:jcc@berkeley.edu">Email Me</a></li>
-                <li><a href="resume.html">Resume</a></li>
-            </ul>
-        </div>
-    </aside>
+        <!-- left -->
+        <aside class="sidebar">
+            <div class="profile">
+                <img src="image/photo.png" class="pic">
+                <h2>Jaycee</h2>
+                <p>Software Development Engineer</p>
+            </div>
 
-    <!-- right -->
-    <main class="main-content">
-        <header class="intro">
-            <h1>Hey, I'm Jaycee!</h1>
-            <p>Welcome to my corner of the internet. I love building beautiful and functional web experiences.</p>
-        </header>
+            <div class="about">
+                <h3>About</h3>
+                <p>Hi, I'm Jaycee. A senior undergrad student at UC Berkeley
+                    major in Computer Science.
+                    Welcome to my creative space where design meets code!</p>
+            </div>
 
-        <section class="projects">
-            <h2>Projects</h2>
-            <div class="grid">
+            <div class="contact">
+                <h3>Contact</h3>
+                <ul>
+                    <li><a href="https://github.com/jcczhang">GitHub</a></li>
+                    <li><a href="http://linkedin.com/in/jingxi-zhang-706b23228">LinkedIn</a></li>
+                    <li><a href="mailto:jcc@berkeley.edu">Email</a></li>
+                    <li><a href="resume.html">Resume</a></li>
+                </ul>
+            </div>
+        </aside>
 
+        <!-- right -->
+        <main class="main-content">
+            <div class="intro-row">
+                <!-- left: intro -->
+                <header class="intro">
+                    <h1>Hey, I'm Jaycee!</h1>
+                    <p>Welcome to my corner of the internet. I love building beautiful and functional web experiences.
+                    </p>
+                </header>
 
-                <!-- Project 2 -->
-                <div class="card">
-                    <img src="image/research.png" class="image">
-                    <div class="info">
-                        <a href="https://drive.google.com/file/d/1AZ-coV5JntcyXKdU0vTbrRQA7Q5dimB5/view">
-                            <h3>3D Reconstruction & Multi-View Adversarial Attack</h3>
-                        <p class="date">2023/6 - 2023/8</p>
-                        <p class="description">
-                            The research used PyTorch3D as the main development language 
-                             and AlexNet as the pre-training model for training and adversarial attacks, as well as 
-                             3D modeling with the help of Blender and Photogrammetry software.
-                        </a>
-                        <div class="tags">
-                            <span class="tag">PyTorch3D</span>
-                            <span class="tag">Blender</span>
-                            <span class="tag">PhotoGrammetry</span>
+                <!-- Right: LeetCode Summary Card -->
+                <div class="leetcode-summary">
+                    <h3>LeetCode Progress</h3>
+                    <div class="leetcode-card">
+                        <div class="summary-row">
+                            <div class="summary-main">
+                                <p>Total Solved</p>
+                                <h2 id="totalSolved">--</h2>
+                            </div>
+                            <div class="beats">
+                                <span> Beats <span id="ranking">--</span>%</span>
+                            </div>
+                        </div>
+
+                        <!-- difficulty -->
+                        <div class="difficulty-row">
+                            <div class="level easy">Easy <span id="easySolved">--</span></div>
+                            <div class="level medium">Med. <span id="mediumSolved">--</span></div>
+                            <div class="level hard">Hard <span id="hardSolved">--</span></div>
+                        </div>
+
+                        <!-- submission acceptance -->
+                        <div class="bottom-stats">
+                            <div class="submission">Submissions <span id="totalSubmission">--</span></div>
+                            <div class="acceptance">Acceptance <span id="acceptanceRate">--</span>%</div>
+                        </div>
+
+                        <!-- view button -->
+                        <div class="footer">
+                            <a href="https://leetcode.com/jcczhang/" target="_blank" class="leetcode-btn"> View Profile</a>
                         </div>
                     </div>
                 </div>
+            </div>
 
-                <!-- Project 3 -->
-                <div class="card">
-                    <img src="image/dighum.png" class="image">
-                    <div class="info">
-                        <a href="https://zienzeng0510.wixstudio.io/dighum100dh">
-                        <h3>Emission Digital Humanities Project</h3>
-                        <p class="date">2024/6</p>
-                        <p class="description">
-                            Digital Humanities project that explores the relationship between
-                            literature and the environment. Created a website using Wix to showcase
-                            the project's findings and research.
-                        </a>
-                        <div class="tags">
-                            <span class="tag">Data Visualization</span>
-                            <span class="tag">WixStudio</span>
-                            <span class="tag">Data Cleaning</span>
+            <section class="projects">
+                <h2>Projects</h2>
+                <div class="grid">
+
+
+                    <!-- Project 2 -->
+                    <div class="card">
+                        <img src="image/research.png" class="image">
+                        <div class="info">
+                            <a href="https://drive.google.com/file/d/1AZ-coV5JntcyXKdU0vTbrRQA7Q5dimB5/view">
+                                <h3>3D Reconstruction & Multi-View Adversarial Attack</h3>
+                                <p class="date">2023/6 - 2023/8</p>
+                                <p class="description">
+                                    The research used PyTorch3D as the main development language
+                                    and AlexNet as the pre-training model for training and adversarial attacks, as well
+                                    as
+                                    3D modeling with the help of Blender and Photogrammetry software.
+                            </a>
+                            <div class="tags">
+                                <span class="tag">PyTorch3D</span>
+                                <span class="tag">Blender</span>
+                                <span class="tag">PhotoGrammetry</span>
+                            </div>
                         </div>
                     </div>
-                </div> 
-                <!-- Project 4 -->
-                <div class="card">
-                    <img src="image/61b.png" class="image">
-                    <div class="info">
-                        <a href="#">
-                        <h3>Build Your Own World(BYOW)</h3>
-                        <p class="date">2024/4</p>
-                        <p class="description">
-                            Developed a 2D game using Java and the CS 61B library. 
-                            Implemented various game mechanics and features, including 
-                            player movement, collision detection, and scoring.
-                        </a>
-                        <div class="tags">
-                            <span class="tag">Java</span>
-                            <span class="tag">Data Structure</span>
+
+                    <!-- Project 3 -->
+                    <div class="card">
+                        <img src="image/dighum.png" class="image">
+                        <div class="info">
+                            <a href="https://zienzeng0510.wixstudio.io/dighum100dh">
+                                <h3>Emission Digital Humanities Project</h3>
+                                <p class="date">2024/6</p>
+                                <p class="description">
+                                    Digital Humanities project that explores the relationship between
+                                    literature and the environment. Created a website using Wix to showcase
+                                    the project's findings and research.
+                            </a>
+                            <div class="tags">
+                                <span class="tag">Data Visualization</span>
+                                <span class="tag">WixStudio</span>
+                                <span class="tag">Data Cleaning</span>
+                            </div>
                         </div>
                     </div>
-                </div> 
-
-                <!-- Project 5 -->
-                <div class="card">
-                    <img src="image/cs161.png" class="image">
-                    <div class="info">
-                        <a href="#">
-                        <h3>A Secure File Sharing System</h3>
-                        <p class="date">2025/3</p>
-                        <p class="description">
-                            CS161 Project2 : Using Golang to build a secure file 
-                            sharing system that allows users to upload, download, 
-                            and share files with others.
-                        </a>
-                        <div class="tags">
-                            <span class="tag">Golang</span>
+                    <!-- Project 4 -->
+                    <div class="card">
+                        <img src="image/61b.png" class="image">
+                        <div class="info">
+                            <a href="#">
+                                <h3>Build Your Own World(BYOW)</h3>
+                                <p class="date">2024/4</p>
+                                <p class="description">
+                                    Developed a 2D game using Java and the CS 61B library.
+                                    Implemented various game mechanics and features, including
+                                    player movement, collision detection, and scoring.
+                            </a>
+                            <div class="tags">
+                                <span class="tag">Java</span>
+                                <span class="tag">Data Structure</span>
+                            </div>
                         </div>
                     </div>
-                </div> 
 
-                <!-- project 6 -->
-                <div class="card">
-                    <img src="image/61a.png" class="image">
-                    <div class="info">
-                        <a href="#">
-                        <h3>Ants vs. Some Bees</h3>
-                        <p class="date">2023/10</p>
-                        <p class="description">
-                            CS61A Project3: Developed a tower defense game using Python
-                            and the CS 61A library. Implemented various game mechanics and features,
-                            including player movement, collision detection, and scoring.
-                        </a>
-                        <div class="tags">
-                            <span class="tag">Python</span>
+                    <!-- Project 5 -->
+                    <div class="card">
+                        <img src="image/cs161.png" class="image">
+                        <div class="info">
+                            <a href="#">
+                                <h3>A Secure File Sharing System</h3>
+                                <p class="date">2025/3</p>
+                                <p class="description">
+                                    CS161 Project2 : Using Golang to build a secure file
+                                    sharing system that allows users to upload, download,
+                                    and share files with others.
+                            </a>
+                            <div class="tags">
+                                <span class="tag">Golang</span>
+                            </div>
                         </div>
                     </div>
-                </div> 
 
-                <!-- project 6 -->
-                <div class="card">
-                    <img src="image/61c.png" class="image">
-                    <div class="info">
-                        <a href="#">
-                        <h3>CS61CPU</h3>
-                        <p class="date">2024/10</p>
-                        <p class="description">
-                            CS61C Project3: Designed and implemented a 32-bit RISC-V
-                            processor in Logisim. Implemented various instructions and
-                            features, including ALU, control unit, and memory.
-                        </a>
-                        <div class="tags">
-                            <span class="tag">RISC-V</span>
+                    <!-- project 6 -->
+                    <div class="card">
+                        <img src="image/61a.png" class="image">
+                        <div class="info">
+                            <a href="#">
+                                <h3>Ants vs. Some Bees</h3>
+                                <p class="date">2023/10</p>
+                                <p class="description">
+                                    CS61A Project3: Developed a tower defense game using Python
+                                    and the CS 61A library. Implemented various game mechanics and features,
+                                    including player movement, collision detection, and scoring.
+                            </a>
+                            <div class="tags">
+                                <span class="tag">Python</span>
+                            </div>
                         </div>
                     </div>
-                </div> 
 
-                <!-- project 7 -->
-                <div class="card">
-                    <img src="image/cs160.jpg" class="image">
-                    <div class="info">
-                        <a href="#">
-                        <h3>PeTrack</h3>
-                        <p class="date">2025/5</p>
-                        <p class="description">
-                            CS160 Project: PeTrack is an intelligent platform that helps reunite 
-                            lost pets with their families. Combining user-friendly interface design 
-                            with AI-powered search capabilities, our platform streamlines the process 
-                            of reporting lost pets and finding potential matches in nearby areas.
-                        </a>
-                        <div class="tags">
-                            <span class="tag">HTML</span>
-                            <span class="tag">CSS</span>
-                            <span class="tag">JavaScript</span>
-                            <span class="tag">React</span>
-                            <span class="tag">UI/UX Design</span>
-
+                    <!-- project 6 -->
+                    <div class="card">
+                        <img src="image/61c.png" class="image">
+                        <div class="info">
+                            <a href="#">
+                                <h3>CS61CPU</h3>
+                                <p class="date">2024/10</p>
+                                <p class="description">
+                                    CS61C Project3: Designed and implemented a 32-bit RISC-V
+                                    processor in Logisim. Implemented various instructions and
+                                    features, including ALU, control unit, and memory.
+                            </a>
+                            <div class="tags">
+                                <span class="tag">RISC-V</span>
+                            </div>
                         </div>
                     </div>
-                </div> 
 
-                <!-- Project 1
+                    <!-- project 7 -->
+                    <div class="card">
+                        <img src="image/cs160.jpg" class="image">
+                        <div class="info">
+                            <a href="#">
+                                <h3>PeTrack</h3>
+                                <p class="date">2025/5</p>
+                                <p class="description">
+                                    CS160 Project: PeTrack is an intelligent platform that helps reunite
+                                    lost pets with their families. Combining user-friendly interface design
+                                    with AI-powered search capabilities, our platform streamlines the process
+                                    of reporting lost pets and finding potential matches in nearby areas.
+                            </a>
+                            <div class="tags">
+                                <span class="tag">HTML</span>
+                                <span class="tag">CSS</span>
+                                <span class="tag">JavaScript</span>
+                                <span class="tag">React</span>
+                                <span class="tag">UI/UX Design</span>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 1
                 <div class="card">
                     <img src="image/pw.png" class="image">
                     <div class="info">
@@ -196,30 +239,65 @@
                             Built a responsive personal website with 3D interactive cat and modern design.</p>
                     </div> -->
                 </div>
-            </div>
-        </section>
+    </div>
+    </section>
 
-        <!-- resume -->
+    <!-- resume -->
 
     </main>
 
+
+
     <!-- 3D cat -->
     <div class="cat">
-        <model-viewer  
-            src="cat.glb"   
-            id="cat"
-            camera-orbit="90deg 90deg 1.5m"
-            model-scale="0.5 0.5 0.5"
-            shadow-intensity="1"   
-            shadow-softness="0.8" 
-            exposure="1"      
-            ar>
+        <model-viewer src="cat.glb" id="cat" camera-orbit="90deg 90deg 1.5m" model-scale="0.5 0.5 0.5"
+            shadow-intensity="1" shadow-softness="0.8" exposure="1" ar>
         </model-viewer>
     </div>
+    </div>
+
+    <script src="cat.js"></script>
+
+    <script>
+        const username = "jcczhang";
+        const apiUrl = `https://leetcode-stats-api.herokuapp.com/${username}`;
+
+        fetch(apiUrl)
+            .then(res => res.json())
+            .then(data => {
+                document.getElementById("totalSolved").innerText = data.totalSolved;
+                document.getElementById("easySolved").innerText = data.easySolved;
+                document.getElementById("mediumSolved").innerText = data.mediumSolved;
+                document.getElementById("hardSolved").innerText = data.hardSolved;
+
+                //submission
+                const submissionCount = Object.values(data.submissionCalendar)
+                    .reduce((a, b) => a + b, 0);
+                document.getElementById("totalSubmission").innerText = submissionCount;
+
+                //acceptance
+                document.getElementById("acceptanceRate").innerText = data.acceptanceRate.toFixed(1);
+
+                // Beats%
+                const totalUsers = 6019910; 
+                const beats = ((1 - data.ranking / totalUsers) * 100).toFixed(1);
+                document.getElementById("ranking").innerText = beats;
+            })
+            .catch(err => {
+                console.error("LeetCode API error:", err);
+                document.getElementById("totalSolved").innerText = "??";
+                document.getElementById("easySolved").innerText = "--";
+                document.getElementById("mediumSolved").innerText = "--";
+                document.getElementById("hardSolved").innerText = "--";
+                document.getElementById("totalSubmission").innerText = "--";
+                document.getElementById("acceptanceRate").innerText = "--";
+                document.getElementById("ranking").innerText = "--";
+
+            });
+    </script>
 
 
-</div>
 
-<script src="cat.js"></script>
 </body>
+
 </html>

@@ -29,6 +29,8 @@ body {
     top: 0;
     height: 100vh;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 /* name, profile */
@@ -43,14 +45,15 @@ body {
     height: auto;
     display: flex;
     margin-bottom: 10px;
-    align-items: center; 
+    align-items: center;
     justify-content: center;
 }
 
 
 /* section */
 .about {
-    margin-bottom: 25px; /* about 和contact */
+    margin-bottom: 25px;
+    /* about 和contact */
 }
 
 .about h3 {
@@ -59,10 +62,15 @@ body {
     color: #fff;
 }
 
-.contact ul li {
-    margin: 5px 0;
+.contact ul {
     display: flex;
+    padding: 0;
+    margin: 0;
     list-style: none;
+}
+
+.contact ul li {
+    margin: 5px 5px;
 }
 
 .contact a {
@@ -86,6 +94,21 @@ body {
 }
 
 /* intro */
+.intro {
+    flex: 1;
+    min-width: 280px;
+    max-width: 600px;
+}
+
+.intro-row {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
 .intro h1 {
     font-size: 36px;
     color: #fff;
@@ -104,16 +127,18 @@ body {
     0% {
         width: 0;
     }
+
     100% {
         width: 100%;
     }
 }
 
-.intro h1 { /* Hey Im Jaycee*/
-    display: inline-block; 
-    overflow: hidden; 
-    white-space: nowrap; 
-    animation: typing 3s steps(30) 1s forwards; 
+.intro h1 {
+    /* Hey Im Jaycee*/
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing 3s steps(30) 1s forwards;
 }
 
 
@@ -163,10 +188,12 @@ body {
 }
 
 .info a:hover {
-    color: #76c7ff; /* hover light blue */
+    color: #76c7ff;
+    /* hover light blue */
 }
 
-.info h3 { /*title*/
+.info h3 {
+    /*title*/
     margin: 0;
     font-size: 18px;
     line-height: 1.4;
@@ -184,6 +211,7 @@ body {
     color: #ddd;
     margin: 0;
 }
+
 .tags {
     margin-top: 10px;
     display: flex;
@@ -192,8 +220,10 @@ body {
 }
 
 .tag {
-    background: rgba(118, 199, 255, 0.2); /* light blue background */
-    color: #76c7ff; /* font color ligther than background */
+    background: rgba(118, 199, 255, 0.2);
+    /* light blue background */
+    color: #76c7ff;
+    /* font color ligther than background */
     font-size: 12px;
     padding: 4px 10px;
     border-radius: 15px;
@@ -208,7 +238,7 @@ body {
     bottom: 20px;
     right: 20px;
     width: 200px;
-    height: 200px; 
+    height: 200px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -251,22 +281,22 @@ body {
     }
 
     .contact ul {
-        flex-direction: row; 
-        flex-wrap: wrap; 
-        justify-content: center; 
-        gap: 15px; 
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
     }
 }
 
 @media screen and (max-width: 480px) {
     body {
-        font-size: 16px; 
+        font-size: 16px;
     }
 
     .profile .pic {
-        width: 80px;  
+        width: 80px;
         height: 80px;
-        align-items: center; 
+        align-items: center;
         justify-content: center;
     }
 
@@ -287,12 +317,140 @@ body {
     }
 
     .card .image {
-        height: 150px;  
+        height: 150px;
     }
+
     .contact ul {
-        flex-direction: row; 
+        flex-direction: row;
         justify-content: center;
         gap: 15px;
     }
 }
 
+
+/* leetcode */
+.leetcode-summary {
+    width: 280px;
+    max-width: 500px; 
+    margin: 0;
+}
+
+.leetcode-card {
+    background: linear-gradient(to bottom right, rgba(26, 26, 46, 0.5), rgba(22, 33, 62, 0.5));
+    border-radius: 10px;
+    padding:15px 20px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+    color: #eee;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    font-size: 14px;
+  }
+
+  .leetcode-card {
+    transition: all 0.3s ease;
+  }
+  
+  .leetcode-card:hover {
+    background: linear-gradient(to bottom right, rgba(40, 40, 60, 0.85), rgba(30, 50, 80, 0.85));
+    transform: translateY(-6px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5);
+  }
+
+  .leetcode-card h3 {
+    margin-bottom: 10px;
+    font-size: 16px;
+  }
+  
+  
+  /* num & beats */
+  .summary-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .summary-main p {
+    font-size: 14px;
+    color: #aaa;
+    margin: 0;
+    margin-bottom: 2px;    
+    line-height: 0.9;
+
+  }
+  
+  .summary-main h2 {
+    font-size: 32px;
+    color: #3ba55d;
+    margin: 0;
+    line-height: 0.9; 
+  }
+  
+  .beats span {
+    font-size: 14px;
+    color: #facc15;
+  }
+  
+  /* difficulty */
+  .difficulty-row {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+  }
+  
+  .difficulty-row .level {
+    flex: 1;
+    padding: 5px;
+    border-radius: 8px;
+    background: rgba(255,255,255,0.05);
+    font-size: 14px;
+    font-weight: bold;
+  }
+  
+  .easy { color: #4caf50; }
+  .medium { color: #ffc107; }
+  .hard { color: #f44336; }
+  
+  /* submission & acceptance */
+  .bottom-stats {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+  }
+  
+  .submission span {
+    color: #bb86fc;
+    font-weight: bold;
+  }
+  
+  .acceptance span {
+    color: #00e676;
+    font-weight: bold;
+  }
+
+  /* view profile */
+  .leetcode-btn {
+    display: inline-block;                 
+    width: 100%;                   
+    padding: 5px 12px;
+    /* margin-top: 10px; */
+    border-radius: 8px;
+    background: rgba(118, 199, 255, 0.15);
+    color: #76c7ff;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(118, 199, 255, 0.3);
+    text-align: center;
+    box-sizing: border-box;
+  }
+  
+  .leetcode-btn:hover {
+    background: rgba(118, 199, 255, 0.3);
+    color: #fff;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(118, 199, 255, 0.2);
+  }
+  
+  
+  
