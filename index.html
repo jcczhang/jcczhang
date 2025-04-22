@@ -74,12 +74,20 @@
                         <!-- submission acceptance -->
                         <div class="bottom-stats">
                             <div class="submission">Submissions <span id="totalSubmission">--</span></div>
-                            <div class="acceptance">Acceptance <span id="acceptanceRate">--</span>%</div>
+                            <div class="today" style="cursor: pointer;" onclick="toggleTodayList()">
+                                Today Solved <span id="todaySolvedCount">--</span>
+                                <span id="toggleArrow">▼</span>
+                            </div>
                         </div>
+
+                        <ul id="todaySolvedList" class="today-list hidden"></ul>
+
+
 
                         <!-- view button -->
                         <div class="footer">
-                            <a href="https://leetcode.com/jcczhang/" target="_blank" class="leetcode-btn"> View Profile</a>
+                            <a href="https://leetcode.com/jcczhang/" target="_blank" class="leetcode-btn"> View
+                                Profile</a>
                         </div>
                     </div>
                 </div>
@@ -258,44 +266,91 @@
 
     <script src="cat.js"></script>
 
+    <!-- leetcode progress board -->
     <script>
         const username = "jcczhang";
-        const apiUrl = `https://leetcode-stats-api.herokuapp.com/${username}`;
-
+        const apiUrl = `https://leetcode-api-faisalshohag.vercel.app/${username}`;
+    
         fetch(apiUrl)
             .then(res => res.json())
             .then(data => {
+    
+                const today = new Date();
+                const startOfDay = new Date(today.getFullYear(), today.getMonth(), today.getDate()).getTime() / 1000;
+                const endOfDay = startOfDay + 86400;
+    
                 document.getElementById("totalSolved").innerText = data.totalSolved;
                 document.getElementById("easySolved").innerText = data.easySolved;
                 document.getElementById("mediumSolved").innerText = data.mediumSolved;
                 document.getElementById("hardSolved").innerText = data.hardSolved;
-
-                //submission
+    
                 const submissionCount = Object.values(data.submissionCalendar)
                     .reduce((a, b) => a + b, 0);
                 document.getElementById("totalSubmission").innerText = submissionCount;
-
-                //acceptance
-                document.getElementById("acceptanceRate").innerText = data.acceptanceRate.toFixed(1);
-
-                // Beats%
-                const totalUsers = 6019910; 
+    
+                const totalUsers = 6019910;
                 const beats = ((1 - data.ranking / totalUsers) * 100).toFixed(1);
                 document.getElementById("ranking").innerText = beats;
+    
+                const todayAC = data.recentSubmissions.filter(item =>
+                    item.statusDisplay === "Accepted" &&
+                    item.timestamp >= startOfDay &&
+                    item.timestamp < endOfDay
+                );
+    
+                document.getElementById("todaySolvedCount").innerText = todayAC.length;
+    
+                const list = document.getElementById("todaySolvedList");
+                list.innerHTML = "";
+                if (todayAC.length === 0) {
+                    const li = document.createElement("li");
+                    li.textContent = "nah, nothing solved today";
+                    list.appendChild(li);
+                } else {
+                    todayAC.forEach(item => {
+                        const li = document.createElement("li");
+                        li.innerHTML = `<a href="https://leetcode.com/problems/${item.titleSlug}" target="_blank">${item.title}</a>`;
+                        list.appendChild(li);
+                    });
+                }
+    
+                //  localStorage diff
+                const prev = JSON.parse(localStorage.getItem("leetcodeSolvedData")) || {};
+                let diff = "--";
+                if (prev.date !== today.toISOString().split('T')[0]) {
+                    if (prev.totalSolved !== undefined) {
+                        diff = data.totalSolved - prev.totalSolved;
+                    }
+                    localStorage.setItem("leetcodeSolvedData", JSON.stringify({
+                        date: today.toISOString().split('T')[0],
+                        totalSolved: data.totalSolved,
+                        diff: diff
+                    }));
+                }
+    
             })
             .catch(err => {
                 console.error("LeetCode API error:", err);
-                document.getElementById("totalSolved").innerText = "??";
+                document.getElementById("totalSolved").innerText = "--";
                 document.getElementById("easySolved").innerText = "--";
                 document.getElementById("mediumSolved").innerText = "--";
                 document.getElementById("hardSolved").innerText = "--";
                 document.getElementById("totalSubmission").innerText = "--";
-                document.getElementById("acceptanceRate").innerText = "--";
                 document.getElementById("ranking").innerText = "--";
-
+                document.getElementById("todaySolvedCount").innerText = "--";
             });
+    
+        // today list 
+        function toggleTodayList() {
+            const list = document.getElementById("todaySolvedList");
+            const arrow = document.getElementById("toggleArrow");
+            const isHidden = list.classList.contains("hidden");
+    
+            list.classList.toggle("hidden", !isHidden);
+            arrow.textContent = isHidden ? "▲" : "▼";
+        }
     </script>
-
+    
 
 
 </body>

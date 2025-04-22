@@ -253,6 +253,20 @@ body {
     display: none;
 }
 
+@media screen and (max-width: 1020px) {
+    .today {
+        position: relative; 
+    }
+    
+    .today-list {
+        position: absolute;
+        left: 100%; /* left */
+        top: 0;
+        transform: translateY(-50%);
+    }
+}
+
+
 /* screen small */
 @media screen and (max-width: 768px) {
     .container {
@@ -286,7 +300,30 @@ body {
         justify-content: center;
         gap: 15px;
     }
+
+    .today-list {
+        right: -105%;    /* right */
+        left: auto;
+        top: 0;
+        margin-top: 0;
+      }
 }
+
+
+@media screen and (max-width: 640px) {
+    .today {
+        position: relative; 
+    }
+    
+    .today-list {
+        position: absolute;
+        left: 100%; /* left */
+        top: 0;
+        transform: translateY(-50%);
+    }
+}
+
+
 
 @media screen and (max-width: 480px) {
     body {
@@ -296,8 +333,11 @@ body {
     .profile .pic {
         width: 80px;
         height: 80px;
+        display: flex;
+
         align-items: center;
         justify-content: center;
+        margin: 0 auto;
     }
 
     .sidebar h2 {
@@ -325,6 +365,11 @@ body {
         justify-content: center;
         gap: 15px;
     }
+
+      .leetcode-summary {
+        margin-left: auto;
+    }
+      
 }
 
 
@@ -345,6 +390,8 @@ body {
     flex-direction: column;
     gap: 16px;
     font-size: 14px;
+    position: relative; 
+
   }
 
   .leetcode-card {
@@ -411,7 +458,7 @@ body {
   .medium { color: #ffc107; }
   .hard { color: #f44336; }
   
-  /* submission & acceptance */
+  /* submission & today */
   .bottom-stats {
     display: flex;
     justify-content: space-between;
@@ -423,7 +470,7 @@ body {
     font-weight: bold;
   }
   
-  .acceptance span {
+  .today span {
     color: #00e676;
     font-weight: bold;
   }
@@ -453,4 +500,55 @@ body {
   }
   
   
+  /* TODAY */
+  .today-summary {
+    position: relative;
+    display: inline-block;
+    min-width: 80px;
+  }
   
+  .today-list {
+    position: absolute;
+    top: 0;
+    right: 105%;
+    background: linear-gradient(to bottom right, rgba(26, 26, 46, 0.85), rgba(22, 33, 62, 0.85)); 
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 12px 20px;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+    z-index: 9999;
+    color: #eee;
+    font-size: 15px;
+    list-style: disc;
+    width: 260px;
+    max-height: 300px;
+    overflow-y: auto;
+    backdrop-filter: blur(8px);  
+    transition: opacity 0.3s ease;
+    transform: none;
+
+  }
+  
+  .today-list li {
+    margin-bottom: 6px;
+  }
+  
+  .today-list li a {
+    color: #89cfff;
+    text-decoration: none;
+  }
+  
+  .today-list li a:hover {
+    text-decoration: underline;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  .projects,
+.projects .grid,
+.projects .card {
+  position: relative;
+  z-index: 1;
+}
