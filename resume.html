@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Jaycee Zhang - Resume</title>
 
   <style>
@@ -13,28 +14,37 @@
       margin: 0;
       padding: 40px 0;
     }
+
     .container {
-      max-width: 840px; /* adjust as needed */
+      max-width: 840px;
+      /* adjust as needed */
       margin: auto;
       padding: 0 40px;
       background-color: #101820;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
       border-radius: 10px;
     }
-    h1, h2, h3 {
+
+    h1,
+    h2,
+    h3 {
       color: #ffffff;
       text-align: center;
     }
+
     a {
       color: #76c7ff;
       text-decoration: none;
     }
+
     a:hover {
       color: #cae8ff;
     }
+
     .section {
       margin-top: 30px;
     }
+
     .section-title {
       font-size: 1.2rem;
       color: #76c7ff;
@@ -42,18 +52,42 @@
       padding-bottom: 5px;
       margin-bottom: 10px;
     }
+
     ul {
       padding-left: 20px;
     }
+
     li {
       margin-bottom: 6px;
     }
+
     p {
       margin: 5px 0;
     }
+
+    /* back button */
+
+    .back-button {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      color: #76c7ff;
+      font-size: 16px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    .back-button:hover {
+      color: #cae8ff;
+    }
   </style>
 </head>
+
 <body>
+  <!-- BACK -->
+  <a href=index.html class="back-button">← Back</a>
+
 
   <div class="container">
     <h1>Jaycee Zhang</h1>
@@ -68,7 +102,8 @@
     <div class="section">
       <h2 class="section-title">Education</h2>
       <p><strong>UC Berkeley</strong>, College of Computing, Data Science, and Society</p>
-      <p><strong>Major:</strong> Computer Science, B.A. | <strong>Minor:</strong> Data Science, B.A. | <em>Expected Graduation: Spring 2026</em></p>
+      <p><strong>Major:</strong> Computer Science, B.A. | <strong>Minor:</strong> Data Science, B.A. | <em>Expected
+          Graduation: Spring 2026</em></p>
     </div>
 
     <div class="section">
@@ -76,50 +111,59 @@
       <ul>
         <li><strong>Languages:</strong> Python, Java, C, Go, RISC-V, SQL, JavaScript, HTML/CSS</li>
         <li><strong>Frameworks:</strong> React, Next.js, Flask, Django, PyTorch3D, RESTful APIs</li>
-        <li><strong>Testing & Tools:</strong> Selenium, Pytest, Git, Redis, MongoDB, PostgreSQL, IntelliJ, VS, GDB, GitHub Actions, Docker, Figma, Blender</li>
+        <li><strong>Testing & Tools:</strong> Selenium, Pytest, Git, Redis, MongoDB, PostgreSQL, IntelliJ, VS, GDB,
+          GitHub Actions, Docker, Figma, Blender</li>
         <li><strong>Software Engineering:</strong> System Architecture, CI/CD, Agile, TDD, Version Control</li>
         <li><strong>Work Authorization:</strong> U.S. Green Card holder (No sponsorship required)</li>
       </ul>
     </div>
 
     <div class="section">
-        <h2 class="section-title">Internship</h2>
-        <div class="experience-header">
-          <div class="job-title-line">
-            <strong>TikTok (ByteDance)</strong>, San Jose, CA
-          </div>
-          <div class="job-subtitle-line">
-            <em>Software Development Engineer Intern</em> &nbsp;&nbsp;|&nbsp;&nbsp; <em>Jun 2025 – Aug 2025</em>
-          </div>
+      <h2 class="section-title">Internship</h2>
+      <div class="experience-header">
+        <div class="job-title-line">
+          <strong>TikTok (ByteDance)</strong>, San Jose, CA
         </div>
-        <ul>
-          <li>Maintained automated testing frameworks to ensure reliability and safety of large-scale Ads Quality systems</li>
-          <li>Built end-to-end tools for functional, regression, and integration testing using Python, Selenium within CI/CD pipelines</li>
-          <li>Collaborated with fast-paced, cross-functional teams to improve ad targeting precision and reduce delivery errors</li>
-          <li>Participated in code reviews, test plan design, and real-time debugging of distributed systems for ad integrity</li>
-        </ul>
+        <div class="job-subtitle-line">
+          <em>Software Development Engineer Intern</em> &nbsp;&nbsp;|&nbsp;&nbsp; <em>Jun 2025 – Aug 2025</em>
+        </div>
       </div>
-      
+      <ul>
+        <li>Maintained automated testing frameworks to ensure reliability and safety of large-scale Ads Quality systems
+        </li>
+        <li>Built end-to-end tools for functional, regression, and integration testing using Python, Selenium within
+          CI/CD pipelines</li>
+        <li>Collaborated with fast-paced, cross-functional teams to improve ad targeting precision and reduce delivery
+          errors</li>
+        <li>Participated in code reviews, test plan design, and real-time debugging of distributed systems for ad
+          integrity</li>
+      </ul>
+    </div>
 
-      <div class="section">
-        <h2 class="section-title">Research</h2>
-        <div class="experience-header">
-          <div class="job-title-line">
-            <strong>NSF-Funded Research (Award #2024276)</strong>, Pomona, CA
-          </div>
-          <div class="job-subtitle-line">
-            <em>Undergraduate Researcher</em> &nbsp;&nbsp;|&nbsp;&nbsp; <em>Jun 2023 – Aug 2023</em>
-          </div>
+
+    <div class="section">
+      <h2 class="section-title">Research</h2>
+      <div class="experience-header">
+        <div class="job-title-line">
+          <strong>NSF-Funded Research (Award #2024276)</strong>, Pomona, CA
         </div>
-        <ul>
-          <li>Designed machine learning architecture for 3D perception models testing AI robustness against attacks</li>
-          <li>Engineered custom data pipeline processing 7+ photogrammetry models with Blender, CaptureReality and Unity</li>
-          <li>Implemented adversarial attack framework using PyTorch3D achieving 85% success rate against target models</li>
-          <li>Developed neural network models with custom loss functions and gradient-based optimization for 3D inputs</li>
-          <li>Analyzed vulnerability patterns using statistical methods uncovering security implications in perception systems</li>
-        </ul>
+        <div class="job-subtitle-line">
+          <em>Undergraduate Researcher</em> &nbsp;&nbsp;|&nbsp;&nbsp; <em>Jun 2023 – Aug 2023</em>
+        </div>
       </div>
-      
+      <ul>
+        <li>Designed machine learning architecture for 3D perception models testing AI robustness against attacks</li>
+        <li>Engineered custom data pipeline processing 7+ photogrammetry models with Blender, CaptureReality and Unity
+        </li>
+        <li>Implemented adversarial attack framework using PyTorch3D achieving 85% success rate against target models
+        </li>
+        <li>Developed neural network models with custom loss functions and gradient-based optimization for 3D inputs
+        </li>
+        <li>Analyzed vulnerability patterns using statistical methods uncovering security implications in perception
+          systems</li>
+      </ul>
+    </div>
+
 
     <div class="section">
       <h2 class="section-title">Projects</h2>
@@ -135,49 +179,55 @@
       </div>
       <ul>
         <li>Implemented cryptographic protocol suite with GoLang using AES-CTR, RSA, and HMAC-SHA256</li>
-        <li>Designed tree-based access structure managing multi-level permissions and efficient revocation mechanisms</li>
-        <li>Engineered secure data sharing system with end-to-end encryption protecting files from unauthorized access</li>
+        <li>Designed tree-based access structure managing multi-level permissions and efficient revocation mechanisms
+        </li>
+        <li>Engineered secure data sharing system with end-to-end encryption protecting files from unauthorized access
+        </li>
         <li>Created digital signature system ensuring data integrity and non-repudiation for all file transactions</li>
-        <li>Developed security testing framework validating system against common attack vectors and vulnerabilities</li>
+        <li>Developed security testing framework validating system against common attack vectors and vulnerabilities
+        </li>
       </ul>
     </div>
 
     <!-- 2 -->
     <div class="experience-header">
-        <div class="job-title-line">
-          <strong>PeTrack App</strong>
-        </div>
-        <div class="job-subtitle-line">
-          <em>Full Stack Developer</em> &nbsp;&nbsp;|&nbsp;&nbsp; <em>Feb 2025 – Present</em>
-        </div>
+      <div class="job-title-line">
+        <strong>PeTrack App</strong>
       </div>
-      <ul>
-        <li>Designed image recognition system with PyTorch, enabling accurate image recognition from user-uploaded photos</li>
-        <li>Engineered RESTful API with Python Flask backend enabling secure communication between service components</li>
-        <li>Developed responsive UI frontend using React and Next.js optimized for both mobile and desktop devices</li>
-        <li>Implemented geospatial database with MongoDB enabling location-based searching with efficient indexing</li>
-        <li>Created automated reporting system with webhook integration for real-time notifications and alerts</li>
-      </ul>
-      
-
-      <div class="experience-header">
-        <div class="job-title-line">
-          <strong>Build Your Own World (BYOW)</strong>
-        </div>
-        <div class="job-subtitle-line">
-          <em>Lead Backend Developer</em> &nbsp;&nbsp;|&nbsp;&nbsp; <em>Apr 2024</em>
-        </div>
+      <div class="job-subtitle-line">
+        <em>Full Stack Developer</em> &nbsp;&nbsp;|&nbsp;&nbsp; <em>Feb 2025 – Present</em>
       </div>
-      <ul>
-        <li>Architected modular game engine using Java implementing pseudo-random world generation with algorithms</li>
-        <li>Designed component-based architecture for game entities enabling extensible and maintainable codebase</li>
-        <li>Engineered collision detection system with spatial partitioning optimizing performance for interactive worlds</li>
-        <li>Implemented audio management system with Java Sound API enhancing immersive gameplay experience</li>
-        <li>Developed using Git workflow with feature branches and continuous integration ensuring code quality</li>
-      </ul>
-      
     </div>
+    <ul>
+      <li>Designed image recognition system with PyTorch, enabling accurate image recognition from user-uploaded photos
+      </li>
+      <li>Engineered RESTful API with Python Flask backend enabling secure communication between service components</li>
+      <li>Developed responsive UI frontend using React and Next.js optimized for both mobile and desktop devices</li>
+      <li>Implemented geospatial database with MongoDB enabling location-based searching with efficient indexing</li>
+      <li>Created automated reporting system with webhook integration for real-time notifications and alerts</li>
+    </ul>
+
+
+    <div class="experience-header">
+      <div class="job-title-line">
+        <strong>Build Your Own World (BYOW)</strong>
+      </div>
+      <div class="job-subtitle-line">
+        <em>Lead Backend Developer</em> &nbsp;&nbsp;|&nbsp;&nbsp; <em>Apr 2024</em>
+      </div>
+    </div>
+    <ul>
+      <li>Architected modular game engine using Java implementing pseudo-random world generation with algorithms</li>
+      <li>Designed component-based architecture for game entities enabling extensible and maintainable codebase</li>
+      <li>Engineered collision detection system with spatial partitioning optimizing performance for interactive worlds
+      </li>
+      <li>Implemented audio management system with Java Sound API enhancing immersive gameplay experience</li>
+      <li>Developed using Git workflow with feature branches and continuous integration ensuring code quality</li>
+    </ul>
+
+  </div>
   </div>
 
 </body>
+
 </html>
