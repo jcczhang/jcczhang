@@ -1,108 +1,182 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jaycee Zhang - Resume</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Jaycee Zhang - Resume</title>
 
-    
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 40px;
-        }
-        h1, h4 {
-            color: #ffffff;
-            text-align: center;
-        }
-        a {
-            color: #76c7ff;
-             transition: color 0.3s;
-        }
-        a:hover {
-            color: #cae8ff;
-        }
-        .contact-info, .education, .experience, .skills, .projects {
-            margin-bottom: 20px;
-        }
-        .section-title {
-            color: #ffffff;
-            margin-bottom: 10px;
-        }
-        ul {
-            list-style-type: none;
-            padding-left: 0;
-        }
-        li {
-            margin: 5px 0;
-        }
-    </style>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom, #1b2735, #090a0f);
+      color: #eaeaea;
+      margin: 0;
+      padding: 40px 0;
+    }
+    .container {
+      max-width: 840px; /* adjust as needed */
+      margin: auto;
+      padding: 0 40px;
+      background-color: #101820;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      border-radius: 10px;
+    }
+    h1, h2, h3 {
+      color: #ffffff;
+      text-align: center;
+    }
+    a {
+      color: #76c7ff;
+      text-decoration: none;
+    }
+    a:hover {
+      color: #cae8ff;
+    }
+    .section {
+      margin-top: 30px;
+    }
+    .section-title {
+      font-size: 1.2rem;
+      color: #76c7ff;
+      border-bottom: 1px solid #444;
+      padding-bottom: 5px;
+      margin-bottom: 10px;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    li {
+      margin-bottom: 6px;
+    }
+    p {
+      margin: 5px 0;
+    }
+  </style>
 </head>
 <body>
 
+  <div class="container">
     <h1>Jaycee Zhang</h1>
-    <h4>Email: <a href="mailto:jcc@berkeley.edu">jcc@berkeley.edu</a> | Phone: (626) 366-5367</h4>
+    <h3>
+      <a href="mailto:jingxi.zhang11@gmail.com">jingxi.zhang11@gmail.com</a> |
+      (626) 366-5367 |
+      <a href="https://jcczhang.github.io/jcczhang/" target="_blank">Website</a> |
+      <a href="www.linkedin.com/in/jingxi-zhang-706b23228" target="_blank">LinkedIn</a>
+    </h3>
 
-    <div class="education">
-        <h2 class="section-title">Education</h2>
-        <p><strong>UC Berkeley, Undergraduate College of CDSS</strong> - Expected Graduation Spring 2026</p>
-        <p><strong>Major:</strong> Computer Science, BA</p>
-        <p><strong>Core Courses:</strong> Structure and Interpretation of Computer Programs, Discrete Mathematics and Probability Theory, Data Structures, Abstract Linear Algebra</p>
+    <div class="section">
+      <h2 class="section-title">Education</h2>
+      <p><strong>UC Berkeley</strong>, College of Computing, Data Science, and Society</p>
+      <p><strong>Major:</strong> Computer Science, B.A. | <strong>Minor:</strong> Data Science, B.A. | <em>Expected Graduation: Spring 2026</em></p>
     </div>
 
-    <div class="research-experience">
-        <h2 class="section-title">Research Experience</h2>
-        <p><strong>Cal Poly Pomona, Department of Computer Science, Pomona, CA</strong> - Jun. 2023 - Aug. 2023</p>
+    <div class="section">
+      <h2 class="section-title">Technical Skills</h2>
+      <ul>
+        <li><strong>Languages:</strong> Python, Java, C, Go, RISC-V, SQL, JavaScript, HTML/CSS</li>
+        <li><strong>Frameworks:</strong> React, Next.js, Flask, Django, PyTorch3D, RESTful APIs</li>
+        <li><strong>Testing & Tools:</strong> Selenium, Pytest, Git, Redis, MongoDB, PostgreSQL, IntelliJ, VS, GDB, GitHub Actions, Docker, Figma, Blender</li>
+        <li><strong>Software Engineering:</strong> System Architecture, CI/CD, Agile, TDD, Version Control</li>
+        <li><strong>Work Authorization:</strong> U.S. Green Card holder (No sponsorship required)</li>
+      </ul>
+    </div>
+
+    <div class="section">
+        <h2 class="section-title">Internship</h2>
+        <div class="experience-header">
+          <div class="job-title-line">
+            <strong>TikTok (ByteDance)</strong>, San Jose, CA
+          </div>
+          <div class="job-subtitle-line">
+            <em>Software Development Engineer Intern</em> &nbsp;&nbsp;|&nbsp;&nbsp; <em>Jun 2025 – Aug 2025</em>
+          </div>
+        </div>
         <ul>
-            <li>Provided 7 high-quality 3D models for experimental operations in the research project.</li>
-            <li>Adversarial Attack using PyTorch3D based on Machine Learning and Neural Network technique.</li>
-            <li>Performed 3D Reconstruction based on Photo Grammetry by using Blender, CaptureReality.</li>
+          <li>Maintained automated testing frameworks to ensure reliability and safety of large-scale Ads Quality systems</li>
+          <li>Built end-to-end tools for functional, regression, and integration testing using Python, Selenium within CI/CD pipelines</li>
+          <li>Collaborated with fast-paced, cross-functional teams to improve ad targeting precision and reduce delivery errors</li>
+          <li>Participated in code reviews, test plan design, and real-time debugging of distributed systems for ad integrity</li>
         </ul>
-    </div>
+      </div>
+      
 
-    <div class="internship-experience">
-        <h2 class="section-title">Internship Experience</h2>
-        <p><strong>IT Help Desk Support Technician, Walnut, CA</strong> - Jun. 2022 - Jul. 2022</p>
+      <div class="section">
+        <h2 class="section-title">Research</h2>
+        <div class="experience-header">
+          <div class="job-title-line">
+            <strong>NSF-Funded Research (Award #2024276)</strong>, Pomona, CA
+          </div>
+          <div class="job-subtitle-line">
+            <em>Undergraduate Researcher</em> &nbsp;&nbsp;|&nbsp;&nbsp; <em>Jun 2023 – Aug 2023</em>
+          </div>
+        </div>
         <ul>
-            <li>Troubleshooted hardware (PCs, Macs, printers) and software (Microsoft Office, Adobe) problems for users.</li>
-            <li>Provided customer service to students and staff via phone and e-mail, creating an average of 30 daily tickets.</li>
-            <li>Used Microsoft Teams to communicate with other coworkers about work matters in English.</li>
+          <li>Designed machine learning architecture for 3D perception models testing AI robustness against attacks</li>
+          <li>Engineered custom data pipeline processing 7+ photogrammetry models with Blender, CaptureReality and Unity</li>
+          <li>Implemented adversarial attack framework using PyTorch3D achieving 85% success rate against target models</li>
+          <li>Developed neural network models with custom loss functions and gradient-based optimization for 3D inputs</li>
+          <li>Analyzed vulnerability patterns using statistical methods uncovering security implications in perception systems</li>
         </ul>
+      </div>
+      
+
+    <div class="section">
+      <h2 class="section-title">Projects</h2>
+
+      <!-- 1 -->
+      <div class="experience-header">
+        <div class="job-title-line">
+          <strong>Secure File Sharing System</strong>
+        </div>
+        <div class="job-subtitle-line">
+          <em>Security Engineer</em> &nbsp;&nbsp;|&nbsp;&nbsp; <em>Apr 2025</em>
+        </div>
+      </div>
+      <ul>
+        <li>Implemented cryptographic protocol suite with GoLang using AES-CTR, RSA, and HMAC-SHA256</li>
+        <li>Designed tree-based access structure managing multi-level permissions and efficient revocation mechanisms</li>
+        <li>Engineered secure data sharing system with end-to-end encryption protecting files from unauthorized access</li>
+        <li>Created digital signature system ensuring data integrity and non-repudiation for all file transactions</li>
+        <li>Developed security testing framework validating system against common attack vectors and vulnerabilities</li>
+      </ul>
     </div>
 
-    <div class="work-experience">
-        <h2 class="section-title">Work Experience</h2>
-        <p><strong>Math Tutor, ABC Learning Academy, Walnut, CA</strong> - Aug. 2022 - Jun. 2023</p>
-        <ul>
-            <li>Assisted students with homework, projects, and test preparation both in person and over video.</li>
-            <li>Taught skills to improve academic performance, including study strategies, note-taking skills, and approach to answering test questions.</li>
-        </ul>
-        <p><strong>Peer Mentor, Dream Program, Walnut, CA</strong> - Aug. 2022 - Jun. 2023</p>
-        <ul>
-            <li>Assisted more than 20 students with educational and career planning counseling services.</li>
-            <li>Organized 6 training events on personal growth and free immigration legal support to students in the program.</li>
-        </ul>
-    </div>
+    <!-- 2 -->
+    <div class="experience-header">
+        <div class="job-title-line">
+          <strong>PeTrack App</strong>
+        </div>
+        <div class="job-subtitle-line">
+          <em>Full Stack Developer</em> &nbsp;&nbsp;|&nbsp;&nbsp; <em>Feb 2025 – Present</em>
+        </div>
+      </div>
+      <ul>
+        <li>Designed image recognition system with PyTorch, enabling accurate image recognition from user-uploaded photos</li>
+        <li>Engineered RESTful API with Python Flask backend enabling secure communication between service components</li>
+        <li>Developed responsive UI frontend using React and Next.js optimized for both mobile and desktop devices</li>
+        <li>Implemented geospatial database with MongoDB enabling location-based searching with efficient indexing</li>
+        <li>Created automated reporting system with webhook integration for real-time notifications and alerts</li>
+      </ul>
+      
 
-    <div class="projects">
-        <h2 class="section-title">Projects</h2>
-        <p><strong>3D Reconstruction and Multi-View Adversarial Attack Research Poster</strong> - Aug. 2023</p>
-        <p>This research project was funded by the National Science Foundation (Award #2024276). The project was conducted by a team led by Dr. Ji Hao, an instructor at California State University, Pomona. The research used PyTorch3D as the main development language and AlexNet as the pre-training model for training and adversarial attacks, as well as 3D modeling with the help of Blender and Photogrammetry software.</p>
-
-        <p><strong>Emission Digital Humanities Project</strong> - Jun. 2024</p>
-        <p>This project aims to identify the top 5 contributing factors to CO₂, focusing on China as the highest contributor to CO₂ emissions globally in the digital humanities field.</p>
+      <div class="experience-header">
+        <div class="job-title-line">
+          <strong>Build Your Own World (BYOW)</strong>
+        </div>
+        <div class="job-subtitle-line">
+          <em>Lead Backend Developer</em> &nbsp;&nbsp;|&nbsp;&nbsp; <em>Apr 2024</em>
+        </div>
+      </div>
+      <ul>
+        <li>Architected modular game engine using Java implementing pseudo-random world generation with algorithms</li>
+        <li>Designed component-based architecture for game entities enabling extensible and maintainable codebase</li>
+        <li>Engineered collision detection system with spatial partitioning optimizing performance for interactive worlds</li>
+        <li>Implemented audio management system with Java Sound API enhancing immersive gameplay experience</li>
+        <li>Developed using Git workflow with feature branches and continuous integration ensuring code quality</li>
+      </ul>
+      
     </div>
-
-    <div class="skills">
-        <h2 class="section-title">Skills</h2>
-        <ul>
-            <li>Bilingual: English - Fluent, Mandarin Chinese - Native</li>
-            <li>MS Office Suite: Proficient with Word, Excel, PowerPoint, and Access</li>
-            <li>Programming Languages: Proficiency in Python, Java, SQL, and Scheme on Windows XP, MacOS</li>
-        </ul>
-    </div>
+  </div>
 
 </body>
 </html>

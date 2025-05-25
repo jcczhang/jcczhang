@@ -552,3 +552,29 @@ body {
   position: relative;
   z-index: 1;
 }
+
+/* PeTrack links */
+.meta {
+    display: flex;
+    align-items: center;
+    gap: 12px; 
+    margin-bottom: 8px;
+  }
+  
+  .date {
+    margin: 0;
+    font-size: 14px;
+    color: #ccc;
+  }
+.links a {
+    color: #4ea1f3;           
+    text-decoration: underline; 
+    font-weight: 500;
+    margin-right: 8px;
+  }
+  
+  .links a:hover {
+    color: #1d75cf;          
+    cursor: pointer;       
+  }
+  
